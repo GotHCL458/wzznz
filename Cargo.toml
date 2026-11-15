@@ -1,0 +1,33 @@
+[package]
+name = "wzznz"
+version = "1.0.0"
+edition = "2021"
+
+[[bin]]
+name = "外置转内置"
+path = "src/main.rs"
+
+[dependencies]
+windui = "0.20"
+encoding_rs = "0.8"
+rust-embed = "8.4"
+zip = { version = "2", default-features = false, features = ["deflate"] }
+sevenz-rust = "0.6"
+windows = { version = "0.58", features = [
+    "Win32_Foundation",
+    "Win32_Devices_DeviceAndDriverInstallation",
+    "Win32_System_Registry",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_System_Diagnostics_Debug",
+    "Win32_System_Threading",
+] }
+
+[build-dependencies]
+winres = "0.1"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"
