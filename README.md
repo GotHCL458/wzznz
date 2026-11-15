@@ -217,5 +217,5 @@ wind/
 ## 致谢
 
 - [windui](https://crates.io/crates/windui) — Win32/GDI 即时模式 GUI
-- [PECMD](http://www.pecmd.net/) — WinPE 脚本解释器
+- PECMD — WinPE 脚本解释器
 - `rust-embed`、`encoding_rs`、`zip`、`sevenz-rust`、`windows` crate
